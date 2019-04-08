@@ -15,6 +15,15 @@ if cat.valid?
  end
 end
 
+def update
+  cat = Cat.find(params[:id])
+  if cat.update_attributes(cat_params)
+    render json: cats
+  else
+    render json: cat.errors, status:
+    :unprocessable_entity
+  end
+end
 
 def destroy
   cats = Cat.all

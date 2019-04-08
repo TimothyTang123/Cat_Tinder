@@ -32,9 +32,9 @@ class NewCat extends Component{
   }
     render(){
       return(
-      <div className = "disform">
+      <div className="disform">
       <label id="name">Name</label>
-        <FormControl
+        <FormControl className="disformtwo"
         placeholder="Enter Cat Name"
         type="text"
         name="name"
@@ -42,7 +42,7 @@ class NewCat extends Component{
         value={this.state.form.name}
         />
         <label id="age">Age</label>
-        <FormControl
+        <FormControl className="disformtwo"
         placeholder="Enter Age"
         type="text"
         name="age"
@@ -50,16 +50,14 @@ class NewCat extends Component{
         value={this.state.form.age}
         />
         <label id="enjoys">Enjoys</label>
-        <FormControl
+        <FormControl className="disformtwo"
         placeholder="What Does Your Cat Enjoy?"
         type="text"
         name="enjoys"
         onChange={this.handleChange.bind(this)}
         value={this.state.form.enjoys}
         />
-        <div className = "disdeletebutton">
-        <button id="submit" class="btn btn-danger btn-lg" onClick={this.submitAndClear.bind(this)}>Create Cat Profile</button>
-        </div>
+        <button id="submit" className="btn btn-info btn-lg" onClick={this.submitAndClear.bind(this)}>Create Cat Profile</button>
       </div>
     )
     }

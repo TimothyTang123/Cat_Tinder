@@ -20,27 +20,30 @@ class Cats extends Component {
 
   render() {
     return (
-	<Container>
+	<Container className="table">
   <Row>
      	<Col xs={12}>
-          	<ListGroup>
+          	<ListGroup className="distabletwo">
               {this.props.cats.map((cat, index) =>{
                 return (
                   <ListGroupItem key={index}>
                       <h4>
                       <div className="distable">
-                        <span onClick= {this.handleShow.bind(this, cat)} className='cat-name'>
+                        <span className='cat-name'>
                           {cat.name}
                         </span>
-                        - <small className='cat-age'>{cat.age} years old</small>
+                         <small className='cat-age'></small>
                         </div>
                       </h4>
 
                     <span className='cat-enjoys'>
-                      {cat.enjoys}
+
                     </span>
 
                     <div className = "disbutton">
+                    <button className="btn btn-primary" onClick={this.handleShow.bind(this, cat)}>
+                        More Cat Info
+                    </button>
                     <button class = "btn btn-danger" onClick={this.props.delete.bind(this, cat.id)}>Delete</button>
                     </div>
                   </ListGroupItem>
