@@ -56,8 +56,8 @@ class Cats extends Component {
              <Modal.Header closeButton>
                <Modal.Title>{this.state.cat.name}</Modal.Title>
              </Modal.Header>
-             <Modal.Body>Enjoys :{this.state.cat.enjoys}<br/>
-             Age :{this.state.cat.age}</Modal.Body>
+             <Modal.Body>Enjoys: {this.state.cat.enjoys}<br/>
+             Age: {this.state.cat.age}</Modal.Body>
              <Modal.Footer>
                <Button variant="secondary" onClick={this.handleClose.bind(this)}>
                  Close
