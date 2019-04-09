@@ -8,7 +8,8 @@ class NewCat extends Component{
       form : {
         name: '',
         age: '',
-        enjoys: ''
+        enjoys: '',
+        gender: ''
       }
     }
   }
@@ -57,7 +58,9 @@ class NewCat extends Component{
         onChange={this.handleChange.bind(this)}
         value={this.state.form.enjoys}
         />
-        <button id="submit" className="btn btn-info btn-lg" onClick={this.submitAndClear.bind(this)}>Create Cat Profile</button>
+        <br/>
+        <br/>
+        <button id="submit" className="btn btn-outline-danger btn-lg" onClick={this.submitAndClear.bind(this)}>Create Cat Profile</button>
       </div>
     )
     }
